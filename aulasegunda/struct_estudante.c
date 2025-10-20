@@ -7,33 +7,33 @@ struct Estudante{
 	float nota1;
 	float nota2;
 	float media;
-	int quantidade;
 };
 
 int main(){
 	struct Estudante aluno;
+	int quantidade;
 	
 	printf("Numero de alunos: ");
-	scanf("%d", &aluno.quantidade);
-	if (aluno.quantidade >= 50 || aluno.quantidade <= 0){
+	scanf("%d", &quantidade);
+	if (quantidade > 50 || quantidade <= 0){
 		printf("\nNumero Invalido. ");
 	}
 	else {
 	
-		for( int i = 0; i < aluno.quantidade; i++){
+		for( int i = 0; i < quantidade; i++){
 			
 			printf("\n-----------------------------------------");
 	
-			printf("\nDigite seu nome: ");
-			scanf("%s", &aluno.nome);
+			printf("\nDigite o nome do Aluno: ");
+			scanf(" %[^\n]", &aluno.nome);
 			
-			printf("\nDigite seu rgm: ");
+			printf("\nDigite o rgm do Aluno: ");
 			scanf("%d", &aluno.matricula);
 			
-			printf("\nsua primeira nota: ");
+			printf("\nPrimeira nota: ");
 			scanf ("%f", &aluno.nota1);
 			
-			printf("\nsua segunda nota: ");
+			printf("\nSegunda nota: ");
 			scanf("%f", &aluno.nota2);
 			
 			aluno.media= (aluno.nota1 + aluno.nota2) /2;
